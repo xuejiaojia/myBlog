@@ -1,0 +1,30 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "个人博客案例",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuejiaojia/myBlog.git"
+  },
+  "keywords": [
+    "博客",
+    "node",
+    "git"
+  ],
+  "author": "jia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuejiaojia/myBlog/issues"
+  },
+  "homepage": "https://github.com/xuejiaojia/myBlog#readme",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.5"
+  }
+}
