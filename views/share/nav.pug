@@ -1,0 +1,19 @@
+mixin nav(menu)
+    li.layui-nav-item
+        a(href="")= menu
+#blog-header.layui-bg-black
+    div.layui-container
+        div.layui-row
+            div.layui-col-md9.layui-col-sm9
+                ul.layui-nav
+                    +nav("首页")
+                    +nav("Web")
+                    +nav("Java")
+                    +nav("Python")
+                    +nav("关于博主")
+            div.layui-col-md3.layui-col-sm3
+                ul.layui-nav
+                    +nav("登录")
+                    +nav("注册")
+                    //个人中心
+                    //退出

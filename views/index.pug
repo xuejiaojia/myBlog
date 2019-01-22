@@ -1,0 +1,26 @@
+extends ./share/module
+
+block css
+    link(rel="stylesheet", href="/css/index.css")
+
+block contents
+    //二级菜单 .css在nav
+    include ./share/secNav
+
+    .layui-container
+        .layui-row.layui-col-space15
+            //- 文章列表
+            .layui-col-md8
+                ul.article-list
+                    li 122
+                    li 122
+
+                //分页
+                include  ./share/fenye
+
+            //右侧公告 .css nav
+            include ./share/right
+
+
+block scripts
+    script(src="/js/index.js")

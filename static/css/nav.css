@@ -1,0 +1,89 @@
+/*模板整体样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f2f2;
+}
+/*blog 导航栏*/
+#blog-header{
+    position: fixed;
+    top:0;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #404553;
+    border-right: 1px solid #404553;
+}
+
+/* 副导航 */
+.blog-panel .layui-container{
+    padding: 0;
+}
+.blog-panel {
+    height: 50px;
+    line-height: 50px;
+    margin:60px 0;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.blog-panel ul li {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+}
+
+.blog-panel ul li.layui-this a {
+    color: #5FB878;
+}
+
+.blog-panel ul li a {
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+
+.blog-column-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+/*超出显示省略号*/
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 分页 */
+#laypage{
+    text-align: center;
+}
+#laypage div{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 0;
+}
+
+
+/* 右导航 */
+.layui-col-space15 .layui-col-md4{
+    margin-top: -7.5px;
+}
+
+
+/*blog 底部*/
+#blog-footer{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #737573;
+}

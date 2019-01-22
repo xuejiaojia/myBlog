@@ -1,0 +1,10 @@
+#content{
+    overflow: hidden;
+}
+#content .layui-container{
+    margin-top: 100px;
+}
+#content .layui-container .layui-col-md8{
+    background-color: #fff;
+    padding: 20px;
+}
