@@ -1,0 +1,14 @@
+extends ./share/module
+block css
+    link(rel="stylesheet", href="/css/isOk.css")
+
+block contents
+    .content
+        h1(style="text-align:center;color:red;")= status
+        h1(style="text-align:center;") 即将跳转
+
+block scripts
+    script.
+        setTimeout(() => {
+            location.href = "/"
+        }, 1000)

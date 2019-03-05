@@ -1,4 +1,20 @@
 extends ./share/module
+
+mixin userInfo
+    .layui-form-item
+        label.layui-form-label 用户名
+        .layui-input-inline
+            input(type="text" name="username" required  lay-verify="required" placeholder="请输入用户名   " autocomplete="off" class="layui-input")
+    .layui-form-item
+        label.layui-form-label 密码
+        .layui-input-inline
+            input(type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input")
+mixin btn
+    .layui-form-item
+        .layui-input-block
+            button(class="layui-btn lay-submit"  lay-filter="formDemo") 立即提交
+            button(type="reset" class="layui-btn layui-btn-primary") 重置
+
 block css
     link(rel="stylesheet", href="/css/reg.css")
 
@@ -8,13 +24,24 @@ block contents
             .layui-col-md8.layui-col-md-offset2
                 .layui-tab
                     ul.layui-tab-title
-                       li.layui-this 登录
-                       li 注册
+                       li(class=show?"":"layui-this") 登录
+                       li(class=show?"layui-this":"") 注册
                     .layui-tab-content
-                        .layui-tab-item 测试内容
-                        .layui-tab-item.layui-show  岑可能疯狂的你
-
+                        //登录
+                        .layui-tab-item(class=show?"":"layui-show")
+                            form(action="/user/login",method="POST").layui-form
+                                +userInfo
+                                +btn
+                                //注册
+                        .layui-tab-item(class=show?"layui-show":"")
+                            form(action="/user/reg",method="POST").layui-form
+                                +userInfo
+                                .layui-form-item
+                                    label.layui-form-label 确认密码
+                                    .layui-input-inline
+                                        input(type="password" name="confirmPwd" required lay-verify="required" placeholder="确认密码" autocomplete="off" class="layui-input")
+                                +btn
 
 
 block scripts
-
+    script(src="/js/reg.js")

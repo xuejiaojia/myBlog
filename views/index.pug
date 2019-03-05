@@ -12,8 +12,20 @@ block contents
             //- 文章列表
             .layui-col-md8
                 ul.article-list
-                    li 122
-                    li 122
+                    //- li 这是 pug 渲染出来的首
+                    each info in artList
+                        li
+                            a.list-face
+                                img(src=info.author.avatar, alt=info.author)
+                            h2
+                                a.layui-badge= info.tips
+                                a.articlt-title.ellipsis(href=`/article/${info._id}`)= info.title
+                            .list-info
+                                a= info.author.username
+                                span= info.created.toLocaleString()
+                                span.list-reply
+                                    i(title="评论").layui-icon.layui-icon-file-b
+                                    = info.commentNum
 
                 //分页
                 include  ./share/fenye
